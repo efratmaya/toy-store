@@ -1,0 +1,17 @@
+﻿<Window x:Class="PL.manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="manager" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/new_header-mobile.jpg"/>
+        </Grid.Background>
+        <Button x:Name="AllProductsListWindow" Content="product list" Margin="221,192,0,0" Click="getProductList_Click" FontSize="24" FontFamily="Trebuchet MS" HorizontalAlignment="Left" VerticalAlignment="Top" Background="White" BorderBrush="#FFFFF7F7" BorderThickness="1,1,1,1" FontWeight="Bold"/>
+        <Button x:Name="orderList" Content="order list" Margin="448,192,0,0" Click="getOrderList_Click" FontSize="24" FontFamily="Trebuchet MS" HorizontalAlignment="Left" VerticalAlignment="Top" Background="White" BorderBrush="#FFFFF7F7" BorderThickness="1,1,1,1" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

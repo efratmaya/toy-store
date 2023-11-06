@@ -1,0 +1,44 @@
+﻿<Window x:Class="PL.Order.orderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL.Order"
+        mc:Ignorable="d"
+        Title="orderWindow" Height="600" Width="800">
+    <Grid>
+        <Grid>
+            <Label IsEnabled="False" x:Name="orderId" Content="order ID" HorizontalAlignment="Left" Margin="138,29,0,0" VerticalAlignment="Top"/>
+            <TextBox IsEnabled="False" x:Name="TextBoxID" HorizontalAlignment="Left" Margin="270,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label IsEnabled="False" x:Name="clientName" Content="clientName" HorizontalAlignment="Left" Margin="138,82,0,0" VerticalAlignment="Top"/>
+            <TextBox IsEnabled="False" x:Name="TextBoxName" HorizontalAlignment="Left" Margin="270,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label IsEnabled="False" x:Name="clientEmail" Content="client Email" HorizontalAlignment="Left" Margin="130,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.423,2.207"/>
+            <TextBox IsEnabled="False" x:Name="TextBoxEmail"  HorizontalAlignment="Left" Margin="270,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186"/>
+            <Label IsEnabled="False" x:Name="addressForDelivery" Content="address for delivery" HorizontalAlignment="Left" Margin="138,172,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.415,2.62"/>
+            <TextBox IsEnabled="False" x:Name="TextBoxAddressForDelivery" HorizontalAlignment="Left" Margin="270,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label IsEnabled="False" x:Name="orderCondition" Content="order status" HorizontalAlignment="Left" Margin="138,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.415,2.62"/>
+            <TextBox IsEnabled="False" x:Name="TextBoxOrderCondition" HorizontalAlignment="Left" Margin="270,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label IsEnabled="False" x:Name="totalPrice" Content="total price" HorizontalAlignment="Left" Margin="138,263,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.415,2.62"/>
+            <TextBox IsEnabled="False" x:Name="TextBoxTotalPrice" HorizontalAlignment="Left" Margin="270,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label IsEnabled="False" x:Name="items" Content="items" HorizontalAlignment="Left" Margin="624,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.415,2.62"/>
+            <ListView  x:Name="itemsListview" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="507,37,20,158" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <Grid>
+            <Label IsEnabled="False" x:Name="dateOrdered" Content="date ordered" HorizontalAlignment="Left" Margin="124,329,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.415,2.62"/>
+            <TextBox IsEnabled="False" x:Name="TextBoxOrdered" HorizontalAlignment="Left" Margin="270,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="dateSent" Content="date sent" HorizontalAlignment="Left" Margin="124,360,0,0" VerticalAlignment="Top"/>
+            <TextBox  x:Name="TextBoxSent" HorizontalAlignment="Left" Margin="270,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Button x:Name="updateSent"  Content="update" HorizontalAlignment="Left" Height="18" Margin="417,368,0,0" VerticalAlignment="Top" Width="66" Click="UpdateSent" BorderBrush="#FFFFFCFC" Background="#FF9BE4EA" FontFamily="Segoe UI Symbol"/>
+            <Label x:Name="dateDelivered" Content="date delivered" HorizontalAlignment="Left" Margin="124,391,0,0" VerticalAlignment="Top"/>
+            <TextBox  x:Name="TextBoxDelivered" HorizontalAlignment="Left" Margin="270,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Button x:Name="updateDelivered" Content="update" HorizontalAlignment="Left" Height="18" Margin="417,399,0,0" VerticalAlignment="Top" Width="66" Click="UpdateDelivered" BorderBrush="#FFFFFCFC" Background="#FF9BE4EA" FontFamily="Segoe UI Symbol"/>
+        </Grid>
+    </Grid>
+
+</Window>

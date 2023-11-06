@@ -1,0 +1,39 @@
+﻿<Window x:Class="PL.Order.OrderTrackingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL.Order"
+        mc:Ignorable="d"
+        Title="OrderTrackingWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Order/new_header-mobile.jpg"/>
+        </Grid.Background>
+        <TextBox x:Name="TextBoxOrderId" HorizontalAlignment="Left" Margin="298,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" TextChanged="TextBoxOrderId_TextChanged" Height="23"/>
+        <Label x:Name="orderId" Content="order ID" HorizontalAlignment="Left" Margin="230,96,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button x:Name="follow" Content="follow"  HorizontalAlignment="Left" Height="23" Margin="400,99,0,0" VerticalAlignment="Top" Width="54" Click="follow_Click" BorderBrush="#FFFFFCFC" Background="White" FontFamily="Segoe UI Symbol" FontSize="14"/>
+
+        <Button x:Name="ordersDetails" Content="view details"  HorizontalAlignment="Left" Height="23" Margin="461,99,0,0" VerticalAlignment="Top" Width="96" Click="ordersDetails_Click" BorderBrush="#FFFFFCFC" Background="White" FontFamily="Segoe UI Symbol" FontSize="14"/>
+        <Label x:Name="Date" Content="date" HorizontalAlignment="Left" Margin="317,127,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+        <ListView x:Name="dateListView" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="251,153,384,29" FontSize="14"  >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Label x:Name="status" Content="status" HorizontalAlignment="Left" Margin="459,127,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ListView x:Name="statusListView" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="416,153,257,29" FontSize="14"  >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+    </Grid>
+</Window>

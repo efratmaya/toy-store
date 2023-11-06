@@ -1,0 +1,27 @@
+﻿<Window x:Class="PL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="257*"/>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="72*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/new_header-mobile.jpg"/>
+        </Grid.Background>
+
+        <Button x:Name="manager" Content="manager" Margin="110,0,0,0" Click="managerView" FontSize="24" FontFamily="Trebuchet MS" HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="#FFFFF7F7" BorderThickness="1,1,1,1" FontWeight="Bold" Background="White" Width="112"/>
+        <Button x:Name="followOrder" Content="follow order" Margin="417,0,0,0" FontSize="24" FontFamily="Trebuchet MS" HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="#FFFFF7F7" BorderThickness="1,1,1,1" FontWeight="Bold" Click="followOrder_Click" Background="White" Width="147" Grid.ColumnSpan="2"/>
+        <Button x:Name="newOrder" Click="newOrderView" Content="new order" Margin="256,0,0,0" FontSize="24" FontFamily="Trebuchet MS" HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="#FFFFF7F7" BorderThickness="1,1,1,1" FontWeight="Bold" Background="White" Width="125"/>
+        <Button x:Name="simulator" Click="simulator_Click" Content="simulator" Margin="78,0,0,0" FontSize="24" FontFamily="Trebuchet MS" HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="#FFFFF7F7" BorderThickness="1,1,1,1" FontWeight="Bold" Background="#FFFBFBFB" Width="117" Grid.ColumnSpan="2" Grid.Column="1"/>
+    </Grid>
+</Window>

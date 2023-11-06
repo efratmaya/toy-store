@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Products>
+  <Product>
+    <ID>11</ID>
+    <Name>barby</Name>
+    <Price>68</Price>
+    <Category>dolls</Category>
+    <InStock>0</InStock>
+  </Product>
+  <Product>
+    <ID>14</ID>
+    <Name>duby</Name>
+    <Price>100</Price>
+    <Category>dolls</Category>
+    <InStock>0</InStock>
+  </Product>
+  <Product>
+    <ID>40</ID>
+    <Name>lego</Name>
+    <Price>30</Price>
+    <Category>assemblyGames</Category>
+    <InStock>48</InStock>
+  </Product>
+</Products>

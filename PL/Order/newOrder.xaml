@@ -1,0 +1,51 @@
+﻿<Window x:Class="PL.Order.newOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL.Order"
+        mc:Ignorable="d"
+        Title="newOrder" Height="450" Width="800">
+    <Grid x:Name="mainGrid">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Order/new_header-mobile.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="313*"/>
+            <ColumnDefinition Width="487*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="62.404"/>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid Name="UpGrid" Height="auto" Grid.Row="0" Width="auto" Grid.ColumnSpan="2" Margin="0,10,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions >
+            <ComboBox Name="CategorySelector"  SelectionChanged="CategorySelector_SelectionChanged" Grid.ColumnSpan="2" Margin="260,13,317,7" Background="White"/>
+
+            <Label Content="category:" HorizontalAlignment="Left" Margin="141,2,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.316,-2.387" Height="54" Width="148" FontSize="24" FontWeight="Bold"/>
+            <Button Grid.Column="1" Content="view all" HorizontalAlignment="Left" Margin="83,13,0,0" VerticalAlignment="Top" Height="32" Width="84" RenderTransformOrigin="0.483,0.388" Click="ViewAll_Click" Background="White" FontSize="14"/>
+
+        </Grid>
+        <ListView x:Name="CatalogListview" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="130,8,130,7" Grid.Row="1"  Grid.ColumnSpan="2" MouseDoubleClick="CatalogListview_MouseDoubleClick" FontSize="14" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Grid.Column="1" Content="my cart" HorizontalAlignment="Left" Margin="258,24,0,0" VerticalAlignment="Top" Height="32" Width="84" RenderTransformOrigin="0.483,0.388" Click="myCart_Click" Background="White" FontSize="14" FontWeight="Bold">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.447"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</Window>

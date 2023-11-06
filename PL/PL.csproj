@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	  <BaseOutputPath>$(SolutionDir)\bin\</BaseOutputPath>
+	<OutputPath>$(SolutionDir)\bin\</OutputPath>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	<UseCommonOutputDirectory>true</UseCommonOutputDirectory>
+	  <OutputPath>$(SolutionDir)\bin\</OutputPath>
+	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	  
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="cart\new_header-mobile.jpg" />
+    <None Remove="new_header-mobile.jpg" />
+    <None Remove="Order\new_header-mobile.jpg" />
+    <None Remove="Product\new_header-mobile.jpg" />
+    <None Remove="toys.jpg" />
+    <None Remove="חנות-צעצועים-אונליין.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj" />
+    <ProjectReference Include="..\SimulatorLib\SimulatorLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="cart\new_header-mobile.jpg" />
+    <Resource Include="new_header-mobile.jpg" />
+    <Resource Include="Order\new_header-mobile.jpg" />
+    <Resource Include="Product\new_header-mobile.jpg" />
+    <Resource Include="toys.jpg" />
+    <Resource Include="חנות-צעצועים-אונליין.jpg" />
+  </ItemGroup>
+
+</Project>
